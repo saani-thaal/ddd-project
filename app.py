@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/home', methods=['POST'])
 def home():
     data = request.files['file']
-    print(type(data))
     return jsonify({"status":"ok"})
 
-app.run()
+if __name__ == "__main__":
+    app.run()
